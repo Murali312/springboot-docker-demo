@@ -23,18 +23,25 @@ Before building the image, please update the **Dockerfile** in the root director
 ## 🚀 How to Run Locally
 
 ### 1. Clone the repository
+```bash
 git clone https://github.com/your-username/springboot-docker-demo.git
-
+```
 ### 2. Build the JAR file
 Run this command to compile the Java code and generate the JAR file:
+```bash
 mvn clean package
+```
 
 ### 3. Build the Docker Image
 Build the "box" for your application (don't forget the dot at the end!):
+```bash
 docker build -t your-username/springboot-docker-demo .
+```
 
 ### 4. Run the Container
 Start the application and map it to your computer's port 8080:
+```bash
 docker run -p 8080:8080 your-username/springboot-docker-demo
+```
 
 The application will be available at: `http://localhost:8080/docker`
